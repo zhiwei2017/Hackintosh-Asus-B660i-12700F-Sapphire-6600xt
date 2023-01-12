@@ -14,14 +14,15 @@ OpenCore: 0.8.6 (RELEASE)
 # Hardware specs
 
 
-| MotherBoard        | Asus B660i                                      |
-| -------------------- | ------------------------------------------------- |
-| CPU                | Intel 12700F                                    |
-| GPU                | Sapphire Nitro+ Radeon RX 6600 XT               |
-| RAM                | Corsair Vengeance schwarz DIMM Kit 64GB         |
-| SSD                | Western Digital WD_BLACK SN850 NVMe SSD 1TB * 2 |
-| Wireless WIFI Card | BCM94360Z3                                      |
-| PSU                | Corsair SF750                                   |
+| Hardware            | Brand                                           |
+| ------------------- | ----------------------------------------------- |
+| MotherBoard         | Asus B660i                                      |
+| CPU                 | Intel 12700F                                    |
+| GPU                 | Sapphire Nitro+ Radeon RX 6600 XT               |
+| RAM                 | Corsair Vengeance schwarz DIMM Kit 64GB         |
+| SSD                 | Western Digital WD_BLACK SN850 NVMe SSD 1TB * 2 |
+| WIFI/Bluetooth Card | Broadcom BCM94360Z3                             |
+| PSU                 | Corsair SF750                                   |
 
 # What works
 
@@ -43,7 +44,7 @@ OpenCore: 0.8.6 (RELEASE)
 
 1. Check `https://dortania.github.io/OpenCore-Install-Guide/`_ for making MacOS installation USB drive.
 2. In the section of **Config**, use the provided EFI to replace the one from USB drive.
-3. Replace the default wireless card intel AX201 with BCM94360Z3.
+3. Replace the default WIFI/Bluetooth card intel AX201 with Broadcom BCM94360Z3.
 4. Connect all the hardware components.
 5. Check the section of **Installation** to install MacOS in your new PC.
 
@@ -70,6 +71,16 @@ OpenCore: 0.8.6 (RELEASE)
 ![system_info](images/system_info.png)
 ![geekbench_score](images/geekbench_score.png)
 ![bluetooth](images/bluetooth.png)
+
+# Dual Boot with Windows 11
+
+1. Download the Windows 11 iso from windows official website
+2. Make the USB installation drive.
+3. Install Windows 11
+
+   + By default, Windows system cannot use the Broadcom WIFI/Bluetooth card. Therefore, at the stage **connect to internet** you cannot find any wifi, if you don't connect your PC with a LAN cable.
+   + However, there is no button for skip this step by default. You can solve this issue by pressing **Shift** + **F10** to open the terminal and inputting `OOBE\BYPASSNRO` to skip this step.
+4. When you finish the installation, download the file **win_10_64_bcm_driver.zip**, and install the drivers for bluetooth and wifi individually.
 
 # Thanks/Credits
 
