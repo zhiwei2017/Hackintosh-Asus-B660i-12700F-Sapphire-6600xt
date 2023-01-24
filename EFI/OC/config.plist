@@ -1331,7 +1331,7 @@
 				<key>SystemAudioVolumeDB</key>
 				<data>4g==</data>
 				<key>boot-args</key>
-				<string>keepsyms=1 debug=0x100 e1000=0 brcmfx-country=#a -wegnoigpu agdpmod=pikera alcid=66 -revbeta</string>
+				<string>keepsyms=1 debug=0x100 e1000=0 brcmfx-country=#a -wegnoigpu agdpmod=pikera alcid=11 -revbeta</string>
 				<key>run-efi-updater</key>
 				<string>No</string>
 			</dict>
